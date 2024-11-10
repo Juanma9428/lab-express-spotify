@@ -7,7 +7,11 @@
           <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
             <figure>
+           {{#if this.preview_url}}
                 <audio controls src="{{this.preview_url}}"></audio>
+              {{else}}
+                <p>No preview available</p>
+              {{/if}}
             </figure>
           </div>
         </div>
